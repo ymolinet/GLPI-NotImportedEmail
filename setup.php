@@ -78,7 +78,7 @@ function plugin_item_add_notimportedemail_notimportedemail($parm) {
         $message .= '--'.$frontiere."\n";
 
 
-        $query_select_contact = "SELECT users_id FROM glpi_plugin_collecteur_users 
+        $query_select_contact = "SELECT users_id FROM glpi_plugin_notimportedemail_users
         WHERE  notification = '1'" ; 
         foreach ($DB->request($query_select_contact) as $data) { 
             $user = new User ; 
